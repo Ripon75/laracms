@@ -1,0 +1,342 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@font-face {
+  font-family: kalpurush;
+  src: url('../../public/fonts/kalpurush.ttf');
+}
+.font-kp {
+    font-family: kalpurush;
+}
+// ----------------section title & subtitle-----------
+.body {
+    .section {
+        .sec-title {
+            @apply text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-bold ;
+        }
+        .sec-title-extra {
+            @apply text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl;
+        }
+        .sec-subtitle {
+            @apply text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-xl;
+        }
+    }
+}
+// ./---------------section title & subtitle-----------
+
+// ----------------Ant design-------------------
+.ant-carousel {
+    .slick-dots {
+        bottom: 8rem !important;
+        li button {
+            width: 40px !important;
+            height: 10px !important;
+            border-radius: 16px !important;
+        }
+    }
+}
+
+.ant-dropdown-menu-submenu-title {
+    .ant-dropdown-menu-title-content {
+        @apply text-base p-1 text-green-800;
+    }
+}
+// ./---------------Ant design-------------------
+
+// --------------------card-aa-------------------
+.card-aa {
+    @apply container mx-auto w-3/4 px-8 py-8 bg-white border rounded-md shadow-md -mt-14;
+    .title {
+        @apply mb-4 text-3xl font-bold text-center;
+    }
+    .content-wrapper {
+        @apply text-lg text-gray-900 inline-block align-middle;
+    }
+}
+// ./--------------------card-aa----------------
+
+//-----------------------card-bb----------------
+.card-bb {
+    @apply col-span-1 px-2 pb-2;
+    .card-wrapper {
+        @apply h-full overflow-hidden rounded-md border;
+        .img-wrapper {
+            @apply object-cover object-center w-full lg:h-72 md:h-48;
+        }
+        .body {
+            @apply px-8 py-8 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in;
+            .content-wrapper {
+                @apply h-44;
+                .title {
+                    @apply mb-4 text-xl font-semibold text-left;
+                }
+                .subtitle {
+                    @apply line-clamp-3 text-base overflow-ellipsis overflow-hidden;
+                }
+            }
+            .footer {
+                @apply flex flex-wrap items-center;
+                .btn-wrapper {
+                    @apply  shadow inline-flex items-center border px-3 py-1 rounded bg-gray-100 border-gray-100 md:mb-2 lg:mb-0;
+                    .icon-wrapper {
+                        @apply  w-4 h-4 ml-1;
+                    }
+                }
+            }
+        }
+    }
+}
+// ./-----------------------card-bb----------------
+
+//-----------------------card-cc----------------
+.card-cc {
+    min-height: 468px;
+    background-size: 80px auto;
+    background-image: url('../../public/images/icons/bg-slice-blue1.svg');
+    @apply flex flex-col items-center justify-center col-span-1 px-4 bg-white rounded-3xl shadow bg-no-repeat bg-right-bottom;
+    @apply transition-all duration-1000 ease-in-out;
+    .icon {
+        @apply w-24 h-24;
+        background-image: url('../../public/images/icons/edu-blue.svg');
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .title {
+        @apply pt-4 pb-4 text-3xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-xl 2xl:text-2xl font-bold text-primary;
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .subtitle {
+        @apply pb-6 text-sm text-center;
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .action {
+        @apply px-4 py-1 xl:px-3 2xl:px-4 text-sm font-semibold border-2 border-primary rounded-full text-primary;
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .icon-two {
+        @apply w-24 h-24;
+        background-image: url('../../public/images/icons/health-blue.svg');
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .icon-three {
+        @apply w-24 h-24;
+        background-image: url('../../public/images/icons/Social-blue.svg');
+        @apply transition-all duration-1000 ease-in-out;
+    }
+    .icon-four {
+        @apply w-24 h-24;
+        background-image: url('../../public/images/icons/Social-blue.svg');
+        @apply transition-all duration-1000 ease-in-out;
+    }
+
+    &.active {
+        @apply bg-primary;
+        @apply transition-all duration-1000 ease-in-out;
+        background-image: url('../../public/images/icons/bg-slice-white1.svg');
+//-----------hover background-color----------
+        &.red-card {
+           background-color: #C5192D;
+        }
+        &.blue-card {
+            background-color: #A21942;
+        }
+        &.yellow-card {
+            background-color: #FD9D24;
+        }
+        &.green-card {
+           background-color: #4C9F38;
+        }
+// ./----------hover background-color----
+        .icon {
+            background-image: url('../../public/images/icons/edu-white.svg');
+            @apply transition-all duration-1000 ease-in-out;
+        }
+        .icon-two {
+            background-image: url('../../public/images/icons/health-white.svg');
+            @apply transition-all duration-1000 ease-in-out;
+        }
+        .icon-three {
+            background-image: url('../../public/images/icons/Social-white.svg');
+            @apply transition-all duration-1000 ease-in-out;
+        }
+        .icon-four {
+            background-image: url('../../public/images/icons/edu-white.svg');
+            @apply transition-all duration-1000 ease-in-out;
+        }
+        .title {
+            @apply text-white ;
+            @apply transition-all duration-1000 ease-in-out;
+         }
+         .subtitle {
+            @apply text-white;
+            @apply transition-all duration-1000 ease-in-out;
+        }
+        .action {
+            @apply bg-white text-primary border-white mt-12;
+            @apply transition-all duration-1000 ease-in-out;
+        }
+    }
+    &:hover {
+        &.bg-card {
+            @apply bg-primary;
+        }
+
+    }
+}
+// ./--------------------card-cc----------------
+
+//----------------card-feature-------------------
+.card-feature {
+    .content-box {
+    }
+    .card-fh {
+        @apply absolute left-0 right-0 hidden;
+    }
+    &:hover {
+        .card-fh {
+            @apply top-0 bottom-0 block;
+            @apply transition duration-1000 ease-in-out;
+        }
+    }
+}
+//./----------------card-feature----------------
+
+//-------------Profile card--------------
+.profile-card {
+    @apply rounded-lg shadow-md py-10 bg-blue-50;
+    .img-wrapper {
+        @apply rounded-full p-4 w-48 h-48 border-2 mx-auto;
+    }
+    .title {
+        @apply text-xl font-bold py-1 px-8 text-center;
+    }
+    .subtitle {
+        @apply text-primary text-base text-center font-semibold;
+    }
+}
+//./-----------Profile card--------------
+
+//-----------------news-card-------------------
+.news-card {
+    @apply w-full bg-gray-100;
+    .cover-img {
+        .img-wrapper {
+            @apply object-cover object-center w-full lg:h-52 md:h-48;
+        }
+     }
+    .content-wrapper {
+        @apply px-10 sm:px-10 md:px-10 lg:px-10 xl:px-4 2xl:px-10 py-8;
+        .content {
+            @apply mb-4;
+            .tag-btn {
+                @apply px-2 mb-4 text-sm text-white rounded bg-primary;
+            }
+            .news-title {
+                @apply mb-4 text-xl font-bold text-primary inline-block;
+            }
+            .description {
+                @apply mb-4 text-base;
+            }
+        }
+        .footer {
+            @apply flex items-center space-x-6;
+            .user {
+                @apply flex items-center space-x-2;
+                .user-img {
+                    @apply flex flex-wrap content-center rounded-full;
+                }
+                .user-name {
+                    @apply text-sm font-bold;
+                }
+            }
+            .entry-date {
+                @apply flex space-x-2;
+                .icon {
+                    @apply text-primary;
+                }
+                .date {
+                    @apply text-gray-600;
+                }
+            }
+        }
+
+    }
+}
+// ./-----------------news-card-------------------
+
+// -------------------card-gallary---------------
+.card-gallary {
+    .card-wrapper { }
+    .body {
+        @apply relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center;
+        .wrapper {
+            @apply text-center flex flex-col;
+            .title {
+                @apply text-white text-2xl text-center hover:text-white;
+                .extra-title {
+                    @apply text-white text-2xl text-center hover:text-white;
+                }
+            }
+            .action {
+                @apply text-lg font-normal inline-flex items-center justify-center mt-4 text-white;
+            }
+        }
+    }
+}
+// ./-------------------card-gallary-------------
+
+// --------------sticky social icon-------------
+$stickySocialWidth: 48px;
+
+.sticky-social {
+    width: $stickySocialWidth;
+    height: 100vh;
+    @apply fixed flex items-center bottom-0 top-0 z-30;
+    nav {
+        ul {
+            @apply flex flex-col p-0 m-0 space-y-1;
+            li {
+                a {
+                    @apply flex items-center justify-center;
+                    width: $stickySocialWidth;
+                    height: $stickySocialWidth;
+                    background-color:white;
+                    transition: all 0.25s ease-in-out;
+                    &:hover {
+                        width: $stickySocialWidth * 2;
+                        transition: all 0.25s ease-in-out;
+                        @apply rounded-r shadow-md;
+                    }
+                    &.facebook {
+                        background-color:#3C5A98;
+                    }
+                    &.youtube {
+                        background-color:#CD201F;
+                    }
+                    &.pinterest {
+                        background-color:#BD081C;
+                    }
+                    &.twitter {
+                        background-color:#1DA1F2;
+                    }
+                    &.instagram {
+                        background-color:#E4405F;
+                    }
+                    &.linkedin {
+                        background-color:#0A66C2;
+                    }
+                }
+            }
+        }
+    }
+}
+// ./ --------------sticky social icon-------------
+
